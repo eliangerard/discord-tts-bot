@@ -4,6 +4,7 @@ let audioPlayer = new AudioPlayer();
 
 module.exports = {
     name: "say",
+    aliases: ['s'],
     run: async (client, message, messi) => {
         if (!messi[1]) return message.reply("Tienes que escribir algo", { tts: true });
         else {
