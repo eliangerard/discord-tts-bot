@@ -6,7 +6,7 @@ const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv)).argv;
 
 const app = express();
-const port = argv.port || 3000;
+const port = process.env.PORT || argv.port || 3000;
 
 app.use(cors());
 
